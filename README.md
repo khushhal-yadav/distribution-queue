@@ -16,7 +16,7 @@ First implementation is based on shared access when both the applications are on
 
 <b><i>Fastest</i>: SharedJvmMemoryBasedQueue</b> implements SharedQueue <- When both the application are running under the same JVM and have access to common JVM memory/heap allocated.
 
-<b>SharedFileBasedQueue</b> implements DistributedQueue <- Supports applications running on the same server, in same/different JVMs. As of now, communication is via Media of 'Shared file', can be modified to leverage on any other shared Media like memory map file. Its performance depends on the Media involved and the corresponding I/O related to that.
+<b>SharedMediaBasedQueue</b> implements DistributedQueue <- Supports applications running on the same server, in same/different JVMs. As of now, communication is via Media of 'Shared file', can be modified to leverage on any other shared Media like memory map file. Its performance depends on the Media involved and the corresponding I/O related to that.
 <br/><i>start()</i> method starts the queue/broker.
 
 <b>SocketBasedQueue</b> implements DistributedQueue <- Opens a socket and let different PrimeNumberCheck applications running in same JVM/ other JVM on the same server or even in JVM on other server, works on the input and write back the Result.
