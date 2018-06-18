@@ -1,4 +1,4 @@
-package com.khush.distributedqueue.sharedfilebased.transformer;
+package com.khush.distributedqueue.transformer;
 
 /**
  * Created by khush on 17/06/2018.

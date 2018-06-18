@@ -1,4 +1,4 @@
-package com.khush.distributedqueue.sharedfilebased.transformer;
+package com.khush.distributedqueue.transformer;
 
 import java.io.Serializable;
 

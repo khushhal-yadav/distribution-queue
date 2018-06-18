@@ -1,4 +1,4 @@
-package com.khush.checker.sharedqueuebased;
+package com.khush.checker.sharedjvmbased;
 
 import com.khush.checker.PrimeNumberCheck;
 import com.khush.checker.PrimeNumberCheckSimple;

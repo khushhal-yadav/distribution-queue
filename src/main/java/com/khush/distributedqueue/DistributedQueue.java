@@ -12,4 +12,6 @@ public interface DistributedQueue<I extends Serializable, R extends Serializable
     R poll();
 
     void start();
+
+    void clear();
 }

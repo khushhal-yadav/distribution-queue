@@ -1,9 +1,9 @@
 package com.khush;
 
-import com.khush.checker.sharedqueuebased.PrimeNumberChecker;
+import com.khush.checker.sharedjvmbased.PrimeNumberChecker;
 import com.khush.distributedqueue.SharedQueue;
 import com.khush.distributedqueue.message.PrimeResult;
-import com.khush.distributedqueue.sharedjvmmemorybased.SharedJvmMemoryBasedQueue;
+import com.khush.distributedqueue.sharedjvmbased.SharedJvmMemoryBasedQueue;
 import com.khush.generator.sharedbased.RandomNumberGenerator;
 import org.junit.Test;
 

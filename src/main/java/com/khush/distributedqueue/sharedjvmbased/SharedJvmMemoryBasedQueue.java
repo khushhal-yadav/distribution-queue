@@ -1,4 +1,4 @@
-package com.khush.distributedqueue.sharedjvmmemorybased;
+package com.khush.distributedqueue.sharedjvmbased;
 
 import com.khush.distributedqueue.SharedQueue;
 

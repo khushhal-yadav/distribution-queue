@@ -56,6 +56,12 @@ public class SocketBasedQueue<I extends Serializable, R extends Serializable>
         new Thread(socketQueueRunnable).start();
     }
 
+    //Doesn't do anything as of now
+    @Override
+    public void clear() {
+
+    }
+
     private class SocketQueueRunnable implements Runnable {
 
         private final int socketPort;
@@ -91,4 +97,6 @@ public class SocketBasedQueue<I extends Serializable, R extends Serializable>
             handler.handle(socket);
         }
     }
+
+
 }
