@@ -10,9 +10,9 @@ Approach is very simple: having a Broker which is used by RandomNumberGenerator 
 
 It contains three implementations of distributed queue(Broker).
 
-First implementations are based on shared access when both the applications are on same server/JVM so share JVM/heap memory.
-<br/>Second implementation when both applications are running on same server and may be different JVMS but have access to common media on the server  
-<br/>Third implementation opens a socket and let the PrimeNumberChecker running anywhere to work on the 'ints' published by RandomNumberGenerator  
+First implementation is based on shared access when both the applications are on same server/JVM so share JVM/heap memory.
+<br/>Second implementation when both applications are running on same server and may be in different JVMs but have access to common media on the server.
+<br/>Third implementation opens a socket and let the PrimeNumberChecker running anywhere to work on the 'ints' published by RandomNumberGenerator.  
 
 <b><i>Fastest</i>: SharedJvmMemoryBasedQueue</b> implements SharedQueue <- When both the application are running under the same JVM and have access to common JVM memory/heap allocated.
 
@@ -23,7 +23,7 @@ First implementations are based on shared access when both the applications are 
 
 <br> 
 
-<b><i>TestSharedFileBasedQueue</i></b> starts the independent SharedMediaBasedQueues and passes them to <i>RandomNumberGenerator</i> and <i>PrimeNumberChecker</i> to communicate with each other.
+<b><i>TestSharedMediaBasedQueue</i></b> starts the independent SharedMediaBasedQueues and passes them to <i>RandomNumberGenerator</i> and <i>PrimeNumberChecker</i> to communicate with each other.
 <br><b><i>TestSharedJvmMemoryBasedQueue</i></b> passes reference of SharedJvmMemoryBasedQueue to <i>RandomNumberGenerator</i> and <i>PrimeNumberChecker</i> to communicate with each other.
 <br><b><i>TestSocketBasedQueue</i></b> opens up the socket from <i>RandomNumberGenerator</i> and <i>PrimeNumberChecker</i> interact via that to <i>RandomNumberGenerator</i>.
 
