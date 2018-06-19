@@ -10,7 +10,10 @@ import com.khush.generator.sharedmediabased.RandomNumberGenerator;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -46,6 +49,20 @@ public class TestSharedMediaBasedQueue {
         } finally {
             Objects.requireNonNull(inQueue).clear();
             Objects.requireNonNull(outQueue).clear();
+        }
+    }
+
+    @Test
+    public void testStream() throws IOException {
+        InputStream initialStream = new FileInputStream(
+                new File("inputQueue.txt"));
+        //File targetFile = new File("src/main/resources/targetFile.tmp");
+        //OutputStream outStream = new FileOutputStream(targetFile);
+
+        byte[] buffer = new byte[8 * 1024];
+        int bytesRead;
+        while ((bytesRead = initialStream.read(buffer)) != -1) {
+            System.out.println(bytesRead + " " + new String(buffer));
         }
     }
 }
